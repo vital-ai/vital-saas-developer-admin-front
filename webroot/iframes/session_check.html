@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Haley AI - Login</title>
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+        <link rel="shortcut icon" href="/img/haley_favicon.ico">
+        
+    	<script type="text/javascript" src="/js/config.js"></script>
+    	
+    	<script type="text/javascript" src="/common-files/js/jquery-1.10.2.min.js"></script>
+    	
+		<script type="text/javascript" src="/js/vitalservice/jquery.cookie-1.4.0.js"></script>
+    	
+    </head>
+	<body>
+		SESSION CHECK IFRAME
+		
+		<script type="text/javascript">
+		
+			var VITAL_COOKIE_ATTRS = {path: '/', domain: SESSION_DOMAIN, secure: COOKIE_SECURE};
+
+			var VITAL_COOKIE_PREFIX = COOKIE_PREFIX ;
+			
+			var cookieName = VITAL_COOKIE_PREFIX + 'sessionID.' + APP_ID;
+			
+			var sessionCookie = $.cookie(cookieName);
+		
+			//notifyParent("loginState":true,"loginID":"derek@vital.ai","msg":"ok","name":"Derek"} );
+			function notifyParent(obj){
+				
+				if(!obj.loginState) {
+					
+					$.removeCookie(cookieName, VITAL_COOKIE_ATTRS);
+					$.removeCookie(cookieName);
+					
+				}
+				
+				console.log("check resp: ", obj);
+
+				obj.origin = HTTPS_URL;
+				obj.action = 'session_check';
+				window.parent.postMessage(obj, '*');
+				
+			};
+		
+			if(sessionCookie == null || sessionCookie.length == 0) {
+				notifyParent({"loginState":false, msg: 'no cookie'});
+			} else {
+				
+				//call jsonp
+				var script = document.createElement('script');
+				script.src = SAAS_SERVER_URL + 'jsonp/loginState?callback=notifyParent&sessionID=' + sessionCookie;
+				document.getElementsByTagName('head')[0].appendChild(script);
+		
+			}
+			
+		</script>
+		
+	</body>
+</html>    

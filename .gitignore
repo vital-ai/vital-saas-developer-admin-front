@@ -1,0 +1,12 @@
+.project
+.classpath
+
+**/.DS_Store
+package-lock.json
+/logs/*
+/conf/*.config
+/node_modules/
+/target/
+.settings/
+.idea/*
+

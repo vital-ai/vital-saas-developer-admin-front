@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Chat AI Developer Admin</title>
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+        <link rel="shortcut icon" href="/favicon.ico">
+    
+		<script type="text/javascript" src="/js/config.js"></script>
+
+        <link rel="stylesheet" href="/flat-ui/bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="/flat-ui/css/flat-ui.css">
+        
+        <link rel="stylesheet" href="/common-files/css/icon-font.css">
+
+        <link rel="stylesheet" href="/common-files/css/animations.css">
+        
+        <link rel="stylesheet" href="/ui-kit/ui-kit-blog/css/style.css">
+        <link rel="stylesheet" href="/ui-kit/ui-kit-contacts/css/style.css">
+
+        <link rel="stylesheet" href="/ui-kit/ui-kit-content/css/style.css">
+
+        <!-- 
+        <link rel="stylesheet" href="/ui-kit/ui-kit-crew/css/style.css">
+         -->
+        
+        <link rel="stylesheet" href="/ui-kit/ui-kit-footer/css/style.css">
+        
+        <link rel="stylesheet" href="/ui-kit/ui-kit-header/css/style.css">
+
+        <link rel="stylesheet" href="/ui-kit/ui-kit-price/css/style.css">
+
+        <!-- 
+        <link rel="stylesheet" href="/ui-kit/ui-kit-projects/css/style.css">
+         -->
+
+        <link rel="stylesheet" href="/css/style.css">
+        
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VBXT5RXRV2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VBXT5RXRV2');
+</script>        
+              
+<script async src="https://www.google.com/recaptcha/api.js?render=explicit"></script>
+                
+<script type="text/javascript" src="/js/handlebars-4.0.5.js"></script>
+		
+<script type="text/javascript" src="/js/templates.js"></script>
+		
+<script type="text/javascript" src="/common-files/js/jquery-1.10.2.min.js"></script>
+		        
+<style> body { margin: 0; } </style>
+
+<!--      
+<script src="//unpkg.com/three"></script>
+<script src="//unpkg.com/globe.gl"></script>
+-->
+  
+</head>
+
+<body>
+        
+    <div class="page-wrapper">   
+
+    <a name="home"></a>
+            
+    <!-- header-1 -->
+    <header class="header-1">
+        <div class="container">
+        <div class="row">
+        <div class="navbar col-sm-12 navbar-fixed-top" role="navigation">
+        <div class="navbar-header">
+        <button type="button" class="navbar-toggle"></button>
+        <a class="brand" href="#home">
+        <img src="/img/chat-ai-logo-white-transparent.png" style="height: 50px;" alt="">
+        </a>
+        </div>
+        <div class="navbar-collapse collapse">
+        <ul class="nav pull-right">
+        <li>
+        <a href="/home" data-navigo2>HOME</a>
+        </li>
+                                
+        <li class="no-logged-state-visible" style="text-align: center; width: 380px;">
+            &nbsp;
+        </li>
+                                
+        <li class="logged-out-visible top-bar-separator text-align-center" style="display: none;">
+            &nbsp;
+        </li>
+                                
+        <li class="logged-out-visible log-in-button text-align-center" style="display: none;">
+        
+        <!-- modals controlled from javascript in order to determine origin data-toggle="modal" data-target="#myModal" -->
+        
+        <button type="button" class="main-login-link btn btn-success btn-lg" style="margin-top: 24px;">LOG IN
+        </button>
+        </li>
+								
+        
+            
+        <li class="logged-out-visible join-waiting-list-button text-align-center" style="display: none;">
+        <button type="button" class="join-waiting-list-button btn btn-success btn-lg" style="margin-top: 24px;">
+        SIGN UP
+        </button>
+        </li>
+								
+        <li class="logged-in-visible current-username-panel text-align-center" style="display: none;">
+        <a href="#" class="haley-button current-username"></a>
+        </li>
+            
+        <li class="logged-in-visible portal-button text-align-center" style="display: none;">
+        <button type="button" class="haley-button btn btn-info btn-lg" style="margin-top: 24px;">
+        APP
+        </button>
+        </li>
+            
+        <li class="logged-in-visible log-out-button text-align-center" style="display: none;">
+        <button type="button" class="logout-button btn btn-warning btn-lg" style="margin-top: 24px;">
+        LOG OUT
+        </button>
+        </li>
+            
+        </ul>
+            
+        <ul class="subnav">
+               
+        </ul>
+        </div>
+        </div>
+        </div>
+        </div>
+    </header>
+      
+      
+    <!-- needed for top menu to be overtop content -->    
+    <section class="header-1-sub bg-midnight-blue" style="height: 0px">
+        
+    <div id="pt-main" class="page-transitions pt-perspective">
+            
+    <div class="background">&nbsp;</div>
+    <div class="container" style="padding-top: 165px;">
+    <div class="row">
+              
+    <div class="col-md-12" align="center">
+        <h3>&nbsp;</h3>
+        <p></p><br>              
+    </div> 
+    </div>
+    </div>
+    </div>
+    </section>
+    
+<section class="content" id="main-content">            
+</section>          
+
+<div class="content-placeholder-about"></div>        
+        
+<div class="content-placeholder-contact"></div> 
+
+<div class="content-placeholder-footer"></div>        
+
+</div>
+     
+<!-- modals are appended to the body -->
+<script type="text/javascript">
+
+	var body = $('body');
+
+	var context={PATH_PREFIX: '/', HTTPS_URL: HTTPS_URL};
+	
+	var modals = ['login-iframe', 'password-reset-confirm-iframe', 'reset-password-iframe'];
+	
+	for(var i = 0 ; i < modals.length; i++) {
+		
+		var mpath = 'templates/' + modals[i] + '.hbs';
+		
+		var modal = JST[mpath];
+		
+		if(modal == null) {
+			console.error("Modal template not found: " + mpath);
+			continue;
+		}
+		
+		var compiledModal = modal(context);
+		
+		var div = $('<div>').html(compiledModal);
+        
+		body.append(div.children());
+	}
+	
+</script>   
+               
+    <script type="text/javascript" src="/js/template-utils.js"></script>
+
+    <script type="text/javascript" src="/js/panels/abstract-panel.js"></script>
+    <script type="text/javascript" src="/js/panels/home-panel.js"></script>
+
+    <script src="/flat-ui/js/bootstrap.min.js"></script>
+    <script src="/common-files/js/modernizr.custom.js"></script>
+    <script src="/common-files/js/page-transitions.js"></script>
+    <script src="/common-files/js/jquery.backgroundvideo.min.js"></script>
+    <script src="/common-files/js/froogaloop.min.js"></script>
+    <script src="/common-files/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+    <script src="/common-files/js/startup-kit.js"></script>
+    <script type="text/javascript" src="/js/navigo.js"></script>
+    <script type="text/javascript" src="/js/globals.js"></script>
+    <script type="text/javascript" src="/js/index.js"></script>
+    <script>
+  		window.HALEY_CHANNEL_URI_KEY_PREFIX = 'haley-front-handoff';
+	</script>
+    
+  </body>
+</html>

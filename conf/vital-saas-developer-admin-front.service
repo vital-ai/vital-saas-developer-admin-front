@@ -1,0 +1,12 @@
+[Unit]
+Description=VitalSaaSDeveloperAdminFront
+After=network.target
+
+[Service]
+User=centos
+Group=centos
+ExecStart=/home/centos/vital-saas-developer-admin-front.sh
+Restart=always
+
+[Install]
+WantedBy=default.target

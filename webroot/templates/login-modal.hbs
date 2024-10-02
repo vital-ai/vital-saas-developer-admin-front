@@ -1,0 +1,64 @@
+<div class="modal-content-x" id="login-form">
+   	  
+<div class="modal-body">
+ 
+<div class="text-center">
+     	
+<span style="font-size: 24px;" class="logo-lg">Chat AI</span>
+</div>
+    
+<div class="form-group ">
+    <label>Username:</label>
+    <input type="text" class="form-control return-aware modal-active" placeholder="Username" id="UserName" oninput="forceLowerCase(this)">
+    <i class="fa fa-user"></i>
+</div>
+     
+<div class="form-group log-status">
+    <label>Password:</label>
+    <input type="password" class="form-control return-aware modal-active" placeholder="Password" id="Password">
+    <i class="fa fa-lock"></i>
+</div>
+                
+<div><a class="close-modal" href="/resetpassword" data-navigo2>Forgot password?</a></div>
+      
+<div><a class="close-modal" href="/unlocklogin" data-navigo2>Locked login?</a></div>
+            
+<div>&nbsp;<span class="status login-error text-danger"></span><span class="status login-success text-success"></span></div>
+      
+</div>
+    
+<div class="modal-footer">
+    <div class="text-center">
+        	
+    <button id="login-button" type="button" class="btn btn-info modal-active">Log In</button><br><br>
+        	
+    <a class="close-modal" href="/signup" data-navigo2>Sign Up</a>
+            
+    </div>
+</div>
+</div>
+
+<script>
+
+/*
+$('.close-modal-link').click(function(){
+		
+    console.log("closing modal...");
+    
+    var obj = {};
+    
+    var url = "{{HTTPS_URL}}";
+    
+    obj.origin = url;
+    
+    console.log("HTTPS_URL: ", url);
+
+    obj.action = 'close-modal';
+    
+    window.parent.postMessage(obj, '*');
+				
+});
+*/
+    
+</script>
+

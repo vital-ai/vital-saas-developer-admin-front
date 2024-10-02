@@ -1,0 +1,40 @@
+
+webserver {
+
+  host: 0.0.0.0
+  
+  port: 8044
+
+}
+
+sessionDomain: ".vital.ai"
+
+cookiePrefix: "vitalsaasdeveloperadmin_"
+
+cookieSecure: true
+
+# https variant of this webapp, served from https
+
+# this URL, no path, used for iframe
+websiteURL: "http://vital-saas-developer-admin-front.vital.ai"
+
+httpsURL: "https://vital-saas-developer-admin-front.vital.ai/"
+
+webappConnected: true
+
+webappURL: "https://vital-saas-developer-admin.vital.ai/"
+
+saasServerURL: "https://haley-saas-server.vital.ai/"
+
+eventbusURL: "https://haley-saas-server.vital.ai/eventbus"
+
+appID: "haley-saas"
+
+rolesCheckEnabled: true
+
+webroot: "webroot"
+
+
+
+
+
