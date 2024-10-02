@@ -2083,7 +2083,7 @@ function openModal(modalID) {
 	}
 }
 
-var TITLE = 'Chat.ai';
+var TITLE = 'Chat.ai Developer Admin';
 
 var mc = $('#main-content');
 
@@ -2153,27 +2153,7 @@ function init_router() {
 		router = new Navigo(rootURL, false);
 		
 		router.on({
-            
-            /*
-            '/confirmemail/:code': function(params) {
-			  
-                var code = decodeURIComponent(params.code);
-			  
-                console.log("Navigate: /confirmemail/:code , code = " + code);
-			  
-                openConfirmEmailModal(code);
-			  
-		      },
 
-            '/confirmemail': function(params) {
-			  
-                console.log("Navigate: /confirmemail");
-			  
-                openConfirmEmailModal(null);
-			  
-		      },
-		    */
-            
             '/login' : function(params) {
 			  
                 console.log("Navigate: /login");
@@ -2214,9 +2194,6 @@ function init_router() {
             },    
              
 
-            
-
-            
             '/confirmloginemail/:template/:code': function(params) {
 			  
                 var code = decodeURIComponent(params.code);
@@ -2227,11 +2204,6 @@ function init_router() {
 			  
                 openConfirmLoginEmailModal(template, code);
             },
-            
-
-            
-
-            
 
             
             [homePath] : function(params) {
